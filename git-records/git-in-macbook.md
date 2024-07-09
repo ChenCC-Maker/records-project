@@ -31,5 +31,21 @@
 title自定义即可。
 
 
-### 本地登录至GitHub
+### 本地登录GitHub
 + 使用命令 SSH -T git@github.com 若出现 hi 你的GitHub账号名即登录成功。
+
+### 提交本地代码至GitHub普遍流程
++ 进入本地工程文件夹位置的终端窗口，可以使用com+shift+.快捷健查看该工程中是否有
+.git文件，因为在macOS中一般情况下该文件是隐藏的。
++ ```
+  若该工程没有.git文件
+  git init 若已经存在，跳过该命令
+  git add . 添加当前工程所有修改文件到本地暂存区
+  git status 查看添加到本地暂存区的文件
+  git commit -m "your commit describtion" 将本地暂存区提交到本地仓库
+  若是第一次提交代码
+  git remote origin add 你需要连接的远程仓库的url
+  git remote -v 查看你刚才添加的远程仓库地址
+  git branch master 创建master分支
+  git push -u origin master 提交本地仓库代码至远程仓库 
+  ```
